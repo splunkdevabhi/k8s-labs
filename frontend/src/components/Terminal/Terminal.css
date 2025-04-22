@@ -1,0 +1,133 @@
+.terminal-container {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #1e1e1e;
+  font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.terminal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: #333;
+  color: #f0f0f0;
+  border-bottom: 1px solid #555;
+}
+
+.terminal-title {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.terminal-status {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+
+.terminal-status.connected {
+  background-color: #2e7d32;
+}
+
+.terminal-status.disconnected {
+  background-color: #c62828;
+}
+
+.terminal-status.reconnecting {
+  background-color: #f57c00;
+  animation: pulse 1.5s infinite;
+}
+
+.terminal-resizable {
+  position: relative;
+  overflow: hidden;
+}
+
+.terminal {
+  width: 100%;
+  height: 100%;
+  padding: 2px;
+  background-color: #1e1e1e;
+}
+
+.terminal-error {
+  background-color: rgba(198, 40, 40, 0.1);
+  color: #c62828;
+  padding: 8px 12px;
+  margin-top: -1px;
+  border-top: 1px solid #c62828;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.terminal-error button {
+  background-color: #c62828;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.2s;
+}
+
+.terminal-error button:hover {
+  background-color: #b71c1c;
+}
+
+/* Styles for react-resizable */
+.react-resizable {
+  position: relative;
+}
+
+.react-resizable-handle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  bottom: 0;
+  right: 0;
+  background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2IDYiIHN0eWxlPSJiYWNrZ3JvdW5kLWNvbG9yOiNmZmZmZmYwMCIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI2cHgiIGhlaWdodD0iNnB4Ij48ZyBvcGFjaXR5PSIwLjMwMiI+PHBhdGggZD0iTSA2IDYgTCAwIDYgTCAwIDQuMiBMIDQgNC4yIEwgNC4yIDQuMiBMIDQuMiAwIEwgNiAwIEwgNiA2IEwgNiA2IFoiIGZpbGw9IiNmZmZmZmYiLz48L2c+PC9zdmc+');
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  padding: 0 3px 3px 0;
+  background-origin: content-box;
+  cursor: se-resize;
+  z-index: 1000;
+}
+
+/* Animation for connection status changes */
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+  .terminal-container {
+    margin: 15px;
+  }
+  
+  .terminal-resizable {
+    width: calc(100vw - 40px) !important;
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 768px) {
+  .terminal-container {
+    margin: 10px;
+  }
+  
+  .terminal-header {
+    padding
+
