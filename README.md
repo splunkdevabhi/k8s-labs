@@ -1,2 +1,2 @@
 # k8s-labs
- Interactive Kubernetes Labs with Multipass + Splunk Observability Cloud
+Interactive Kubernetes Labs with Multipass + Splunk Observability Cloud
